@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
+@import "./util.scss";
+/**  
+contain class of
+  -> section 
+  -> nav 
+  -> img-homepage 
+  -> aside
+------------------
+Based on mobile-first design
+@media(min-1024px) /lg  contain class of
+  -> nav
+**/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  &__container {
+    position: relative;
+    margin: 0 19% 0 19%;
+  }
+
+  &--nav-bg-color-border-btm-thin-grey {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #aaaaaa;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.nav {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  &__item {
+    cursor: pointer;
+    float: right;
+    display: none;
+    padding: 1.1rem 0.5rem;
+    transform: translateY(10px);
+    &:nth-of-type(1) {
+      transform: translateY(1px);
+      float: left;
+      display: block;
+      padding-left: 0px;
+    }
+    &:nth-of-type(2) {
+      padding-right: 0px;
+    }
+  }
+}
+
+.img-homepage {
+  position: relative;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 250px;
+  background-image: url(./assets/homepage.jpg);
+  object-fit: contain;
+  background-size: cover;
+}
+
+.aside {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  overflow: scroll;
+  &__item {
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #e3e3e3;
+    text-align: center;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    &:first-of-type {
+      cursor: none;
+      text-align: right;
+      padding-right: 1rem;
+      /*
+      &:active {
+        outline: 1px solid #e3e3e3;
+      }
+      */
+    }
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* lg  and above */
+@media (min-width: 1024px) {
+  .nav {
+    &__item {
+      display: block;
+      /*
+      &:nth-of-type(1){
+        float: left;
+      }
+      */
+    }
+  }
+  .aside {
+    display: none;
   }
 }

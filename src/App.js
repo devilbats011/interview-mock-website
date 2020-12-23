@@ -1,25 +1,61 @@
 import "./App.scss";
-import logo from "./logo.svg"
+import React from "react";
+import Logo from "./assets/logo.jpg";
 function App() {
+  // const homeImg = './../assets/homepage.jpg';
+  const navText = [ 'HOME','PORTFOLIO','BLOG','PAGES','FEATURES','MEGA MENU', 'CONTACT']
   return (
-    <div className="App-Grid">
-      <div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
-        <img
-          class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0"
-          src={logo}
-          alt="React Logo"
-        />
-        <div class="text-center space-y-2 sm:text-left">
-          <div class="space-y-0.5">
-            <p class="text-lg text-black font-semibold">Erin Lindford</p>
-            <p class="text-gray-500 font-medium">Product Engineer</p>
+    <>
+      {/* section for pages */}
+      {/* nav for dashboard navigation */}
+      {/* footer */}
+      <section className="section bg-white xb-check">
+        <div className="img-homepage">
+          <div className="section__container">
+            <h1 className="h1 text-center lg:text-justify">
+              Let's be creative whatever
+            </h1>
           </div>
-          <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
-            Message
-          </button>
         </div>
-      </div>
-    </div>
+      </section>
+      <nav className="section bg-thinner-grey section--nav-bg-color-border-btm-thin-grey ">
+        <div className="section__container great-grey weight-x-bold very-tiny-txt ">
+          <ul className="nav">
+            <li className="nav__item"><img src={Logo} alt={"logo"} width="40" height="40"  /> </li>
+            {
+              navText.map((item) => {
+                return (<li className="nav__item">{item}</li>)
+
+              })
+            }
+
+          </ul>
+        </div>
+      </nav>
+      <aside className="aside fixed z-10 top-0 left-0 w-44 bg-black opacity-95 flex flex-col hidden tiny-txt">
+        <div className="aside__item"><span className="cursor-pointer p-1" > X </span></div>
+        {
+          navText.map((item) => {
+            return (<div className="aside__item">{item}</div>)
+          })
+        }
+      </aside>
+      {/* <section className="section test bg-white">jnjk</section>
+
+      <section className="section test bg-black">jkbnj</section>
+
+      <section className="section test bg-white">jbhjbjb</section>
+
+      <section className="section test bg-black">knjk</section>
+
+      <section className="section test bg-white">hbjhb</section>
+
+      <section className="section test bg-teal">nmn m</section>
+
+      <section className="section test bg-black">nb mn</section>
+
+      <footer className="section test bg-blacker">n mn</footer> */}
+    </>
   );
 }
 
