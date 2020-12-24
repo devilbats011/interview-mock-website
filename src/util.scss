@@ -1,14 +1,28 @@
 /*test and check for development reason*/
-.test {
-    /*
-    background-color: #123;
-  width: 100%;
-  */
-  height: 450px;
+
+.h-test-50 {
+  height: 50px;
+}
+.h-test-100 {
+  height: 100px;
+  
+}
+.h-test-250 {
+  height: 250px;
+  
+}
+.h-test-400 {
+  height: 400px;
+
 }
 
 .b-check {
   border: 1px solid #000;
+}
+
+
+.width-fit {
+  width: fit-content;
 }
 
 /* fon-family*/
@@ -32,8 +46,7 @@
 .greater-h1 {
   font-size: 60px;
   font-stretch: normal;
-  font-style: normal;
-  line-height: 0.37;
+  font-style: italic;
   letter-spacing: normal;
 }
 
@@ -140,8 +153,12 @@
   color: #383838;
 }
 
+/*variables*/
+$teal: #00a99d;
+$blackTooth: #404040;
+
 .bg-teal {
-  background-color: #00a99d;
+  background-color:$teal;
 }
 
 .teal {

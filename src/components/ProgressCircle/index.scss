@@ -1,0 +1,21 @@
+@import "./../util.scss";
+
+.progressx > * {
+    transition: .8s;
+}
+
+.rotate-180 {
+    transform: rotate(180deg) !important;
+}
+
+.MuiCircularProgress-colorPrimary {
+    color: $teal !important;
+}
+
+
+.progress-number {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+}

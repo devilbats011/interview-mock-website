@@ -5,10 +5,13 @@ contain class of
   -> nav 
   -> img-homepage 
   -> aside
+  -> offer
 ------------------
 Based on mobile-first design
 @media(min-1024px) /lg  contain class of
+  -> sectiom
   -> nav
+  -> offer
 **/
 
 .section {
@@ -19,7 +22,7 @@ Based on mobile-first design
 
   &__container {
     position: relative;
-    margin: 0 19% 0 19%;
+    margin: 0 5% 0 5%;
   }
 
   &--nav-bg-color-border-btm-thin-grey {
@@ -37,8 +40,9 @@ Based on mobile-first design
     cursor: pointer;
     float: right;
     display: none;
-    padding: 1.1rem 0.5rem;
+    padding: 1.1rem 0.8rem;
     transform: translateY(10px);
+    letter-spacing: 0px;
     &:nth-of-type(1) {
       transform: translateY(1px);
       float: left;
@@ -85,8 +89,23 @@ Based on mobile-first design
   }
 }
 
+.offer {
+  &__card {
+    width: 99%;
+  }
+}
+
 /* lg  and above */
 @media (min-width: 1024px) {
+
+  .section {
+    &__container {
+
+      margin: 0 15% 0 15%;
+    }
+
+  }
+
   .nav {
     &__item {
       display: block;
@@ -100,4 +119,11 @@ Based on mobile-first design
   .aside {
     display: none;
   }
+
+  .offer {
+    &__card {
+      width: 33.3%;
+    }
+  }
+  
 }

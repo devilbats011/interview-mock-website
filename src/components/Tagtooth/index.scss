@@ -1,0 +1,78 @@
+@import "./../util.scss";
+
+$timeDuration: 0.4s;
+$width: 45px;
+$height: 30px;
+
+@function borderWidth() {
+    @return $width/2;
+}
+
+.tag-tooth1 {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;  
+  width: $width;
+  height: $height;
+  position: relative;
+  background-color: $blackTooth;
+  transition: $timeDuration;
+  z-index: 2;
+  top:0px;
+
+  &__fang {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transform: translate(0%, 100%);
+    width: 0px;
+    height: 0px;
+    border-left:  borderWidth() solid transparent;
+    border-right: borderWidth()  solid transparent;
+    border-top: 20px solid $blackTooth;
+    transition: $timeDuration;
+  }
+
+  &:hover {
+    background: $teal;
+    & > .tag-tooth1__fang {
+      border-top: 20px solid $teal;
+    }
+  }
+
+}
+
+.tag-tooth2 {
+    width: $width;
+    height: $height;
+    background-color: $teal;
+    transition: $timeDuration;
+    z-index: 1;
+    transform: translateY(-.5rem);
+    position: absolute;
+    // bottom: 0px;
+
+  
+    &__fang {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transform: translate(0%, 97%);
+      width: 0px;
+      height: 0px;
+      border-left:  borderWidth() solid transparent;
+      border-right: borderWidth() solid transparent;
+      border-top: 20px solid $teal;
+      transition: $timeDuration;
+    }
+  }
+
+  .tag-tooth1:hover + .tag-tooth2 {
+    background-color: $blackTooth;
+  }
+
+  .tag-tooth1:hover + .tag-tooth2 > .tag-tooth2__fang { 
+    border-top: 20px solid $blackTooth;
+  }
+
+
+
