@@ -1,1 +1,48 @@
-@import "./../util.scss";
+// @import "./../util.scss";
+@import "./../../util.scss";
+
+.contact-card {
+  position: relative;
+  border: 1px solid #dedede;  
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 410px;
+//   width: 270px;
+    width: inherit ;
+
+  &__upper_box {
+      position: relative;
+      height: 270px;
+      & > img {
+          height: inherit;
+      }
+
+      &__name {
+        position: relative;
+        background-color: $teal;
+        height: 40px;
+        text-align: center;
+        width: fit-content;
+        border-radius: 5px;
+        line-height: 40px;
+        padding: 0 1rem 0 1rem;
+        margin: 0 auto;
+        transform: translateY(-50%);
+        
+      }
+
+
+  }
+
+  &__under_box {
+    position: relative;
+
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+        width: fit-content;
+        border-bottom: 1px solid #ebebeb;
+    }
+  }
+}

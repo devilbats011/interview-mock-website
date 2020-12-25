@@ -1,4 +1,9 @@
 /*test and check for development reason*/
+.test-img {
+  height: 100px;
+  width: 100px;
+  filter: grayscale(100%);
+}
 
 .h-test-50 {
   height: 50px;
@@ -26,20 +31,33 @@
 }
 
 /* fon-family*/
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(./fonts/Raleway-Regular.ttf) format('truetype');
+}
 .font-raleway {
-  font-family: Raleway;
+  font-family: 'Raleway';
 }
 
 .font-icons {
   font-family: ElegantIcons;
 }
 
+@font-face {
+  font-family: 'AvenirNext';
+  src: local('AvenirNext'), url(./fonts/AvenirNextLTPro-Regular.otf) format('truetype');
+}
 .font-avenir {
   font-family: AvenirNext;
 }
 
+@font-face {
+  font-family: 'MyriadPro';
+  src: local('MyriadPro'), url(./fonts/MavenPro-Regular.ttf) format('truetype');
+}
 .font-myriad {
-  font-family: Myriad Pro;
+  font-family: MyriadPro;
 }
 
 /* font-size */
@@ -75,7 +93,7 @@
   font-size: 16px;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1;
+  // line-height: 1;
   letter-spacing: normal;
 }
 
@@ -83,23 +101,19 @@
   font-size: 14px;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  // line-height: normal;
   letter-spacing: normal;
 }
 
 .txt2 {
   font-size: 13px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
 }
 
 .tiny-txt {
   font-size: 12px;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  // line-height: normal;
   letter-spacing: normal;
 }
 
@@ -107,7 +121,7 @@
   font-size: 10px;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  // line-height: normal;
   letter-spacing: normal;
 }
 
@@ -170,6 +184,9 @@ $blackTooth: #404040;
   color: #e3e3e3;
 }
 
+.thinner-light-grey {
+  color: #e4e4e4;
+}
 .bg-thinner-light-grey {
   background-color: #e4e4e4;
 }
@@ -196,4 +213,14 @@ $blackTooth: #404040;
 
 .great-grey {
   color: #7a7a7a;
+}
+
+/* border */
+
+.b-top-none {
+  border-top: transparent;
+}
+.b-bottom-none {
+  border-bottom: transparent;
+
 }
