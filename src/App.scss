@@ -19,7 +19,6 @@ Based on mobile-first design
   position: relative;
   width: 100%;
   display: block;
-  overflow-x: hidden;
 
   &__container {
     position: relative;
@@ -105,11 +104,9 @@ Based on mobile-first design
     border-radius: 6px;
     border: 2px solid #dedede;
     outline: transparent;
-    &active,:focus {
+    &:active,:focus {
       outline: transparent;
-
     }
-
   }
 }
 

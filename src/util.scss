@@ -34,10 +34,31 @@
 
 @font-face {
   font-family: 'Raleway';
+  
   src: local('Raleway'), url(./fonts/Raleway-Regular.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'RalewayExtrabold';
+  src: local('RalewayExtrabold'), url(./fonts/Raleway-ExtraBold.ttf) format('truetype');
+  
+}
+@font-face {
+  font-family: 'RalewayMedium';
+  src: local('RalewayMedium'), url(./fonts/Raleway-Medium.ttf) format('truetype');
+  
+}
+
 .font-raleway {
   font-family: 'Raleway';
+}
+.raleway-medium {
+  font-family: 'RalewayMedium';
+}
+
+.raleway-extra-bold {
+  font-family: 'RalewayExtrabold';
+
 }
 
 .font-icons {
@@ -48,8 +69,16 @@
   font-family: 'AvenirNext';
   src: local('AvenirNext'), url(./fonts/AvenirNextLTPro-Regular.otf) format('truetype');
 }
+
+@font-face {
+  font-family: 'AvenirNextSemiBold';
+  src: local('AvenirNextSemiBold'), url(./fonts/AvenirNextLTPro-It.otf) format('truetype');
+}
 .font-avenir {
   font-family: AvenirNext;
+}
+.avenir-semi-bold {
+  font-family: AvenirNextSemiBold;
 }
 
 @font-face {
@@ -73,6 +102,9 @@
   font-stretch: normal;
   font-style: normal;
   line-height: 0.53;
+}
+.size-30 {
+    font-size:30px;
 }
 
 .h1 {
@@ -152,11 +184,11 @@
 }
 
 .bg-black {
-  background-color: #383838;
+  background-color: #353535;
 }
 
 .bg-blacker {
-    background-color: #333333;
+    background-color: #303030;
   }
 
 .light-black {
@@ -190,7 +222,9 @@ $blackTooth: #404040;
 .bg-thinner-light-grey {
   background-color: #e4e4e4;
 }
-
+.aaa {
+  color: #aaaaaa;
+}
 .bg-thinner-grey {
     background-color: #dedede;
 }
@@ -223,4 +257,11 @@ $blackTooth: #404040;
 .b-bottom-none {
   border-bottom: transparent;
 
+}
+
+@media(min-width: 1024px)
+{
+  .size-60--lg {
+  font-size: 60px; 
+  }
 }
