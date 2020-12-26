@@ -1,7 +1,7 @@
 import React from "react";
 import Person1 from "./../../assets/people/person-1.png";
 import "./index.scss";
-
+import GroupIcons from "./../GroupIconDiamond/GroupIconDiamond";
 function ContactCard({
   name = "ALEXIS SIMPSON",
   title = "CEO-DEVELOPER",
@@ -11,15 +11,18 @@ function ContactCard({
   return (
     <div className="contact-card thinner-light-grey">
       <div className="contact-card__upper_box mb-4">
-        <img src={Person1} alt="person face" className="bg-cover w-full" />
-        <div className="contact-card__upper_box__name txt2">{name}</div>
+        <div className="bg-teal w-full contact-card__wallpaper" >
+           <GroupIcons/>
+           <img src={Person1} alt="person face" className="bg-cover w-full" />
+        </div>
+        <div className="contact-card__upper_box__name raleway-extra-bold txt2">{name}</div>
       </div>
       <div className="contact-card__under_box b-check-x">
-        <h2 className="contact-card__under_box__title light-black weight-medium py-3 text-center txt2">
+        <h2 className="contact-card__under_box__title light-black weight-medium py-3 text-center tiny-txt">
           {title}
         </h2>
 
-      <div className="mt-3 text-center b-check-x txt-2 thin-grey ">
+      <div className="mt-3 text-center b-check-x txt-2 aaa ">
           <p className="h2 width-fit b-checkx mx-auto">
             <span> M </span> {email}
           </p>

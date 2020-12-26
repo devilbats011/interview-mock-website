@@ -11,14 +11,47 @@
 //   width: 270px;
     width: inherit ;
 
+
+    &__wallpaper {
+      transition: .6s;
+      position: relative;
+      height: inherit;
+      & > img {
+        transition: .6s;
+        height: inherit;
+        opacity: 1;
+      }
+      
+    }
+
+   &:hover > .contact-card__upper_box {
+
+     & > .contact-card__wallpaper {
+        & > img  {
+          opacity: 0;
+        }
+        & > .group {
+          opacity: 1;
+        }
+     }
+
+     & > .contact-card__upper_box__name  {
+       background-color: #383838;
+     }
+
+
+   }
+   
+
+
+
   &__upper_box {
       position: relative;
       height: 270px;
-      & > img {
-          height: inherit;
-      }
+
 
       &__name {
+        transition: .6s;
         position: relative;
         background-color: $teal;
         height: 40px;
@@ -34,6 +67,8 @@
 
 
   }
+
+
 
   &__under_box {
     position: relative;

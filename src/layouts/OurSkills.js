@@ -59,7 +59,7 @@ function OurSkills() {
 
 
       <section className="section  bg-black py-10 pt-20">
-        <div className="section__container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 text-center b-check-x gap-7">
+        <div className="section__container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 text-center b-check-x gap-5">
           <ContactCard />
           <ContactCard />
           <ContactCard />

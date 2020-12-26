@@ -1,5 +1,14 @@
 @import "./../../util.scss";
 
+.absolute-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.group {
+    opacity: 0;
+
+}
 .group-diamond {
     
     &:nth-of-type(1){
