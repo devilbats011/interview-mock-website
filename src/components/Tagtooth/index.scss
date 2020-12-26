@@ -2,16 +2,17 @@
 @import "./../../util.scss";
 
 $timeDuration: 0.4s;
-$width: 45px;
-$height: 30px;
+$width: 46px;
+$height: 44px;
+
 
 @function borderWidth() {
     @return $width/2;
 }
 
 .tag-tooth1 {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;  
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;  
   width: $width;
   height: $height;
   position: relative;
@@ -24,20 +25,13 @@ $height: 30px;
     position: absolute;
     bottom: 0px;
     left: 0px;
-    transform: translate(0%, 100%);
+    transform: translate(0%, 96%);
     width: 0px;
     height: 0px;
     border-left:  borderWidth() solid transparent;
     border-right: borderWidth()  solid transparent;
-    border-top: 20px solid $blackTooth;
+    border-top: 23px solid $blackTooth;
     transition: $timeDuration;
-  }
-
-  &:hover {
-    background: $teal;
-    & > .tag-tooth1__fang {
-      border-top: 20px solid $teal;
-    }
   }
 
 }
@@ -48,32 +42,44 @@ $height: 30px;
     background-color: $teal;
     transition: $timeDuration;
     z-index: 1;
-    transform: translateY(-.5rem);
+    transform: translateY(-1.2rem);
     position: absolute;
-    // bottom: 0px;
+    border-radius: 5px;
+    top: 47px;
 
   
     &__fang {
       position: absolute;
       bottom: 0px;
       left: 0px;
-      transform: translate(0%, 97%);
+      transform: translate(0%, 88%);
       width: 0px;
       height: 0px;
       border-left:  borderWidth() solid transparent;
       border-right: borderWidth() solid transparent;
-      border-top: 20px solid $teal;
+      border-top: 23px solid $teal;
       transition: $timeDuration;
     }
   }
 
-  .tag-tooth1:hover + .tag-tooth2 {
-    background-color: $blackTooth;
+
+  .tag {
+    transition: .4s;
+    
+    &:hover > * {
+      & > .tag-tooth1 {
+        background: $teal;
+        & > .tag-tooth1__fang {
+          border-top: 23px solid $teal;
+        }
+      }
+
+      & > .tag-tooth2 {
+        background: $blackTooth;
+        & > .tag-tooth2__fang {
+          border-top: 23px solid $blackTooth;
+        }
+      }
+    }
   }
-
-  .tag-tooth1:hover + .tag-tooth2 > .tag-tooth2__fang { 
-    border-top: 20px solid $blackTooth;
-  }
-
-
 

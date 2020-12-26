@@ -5,7 +5,12 @@ import Btn from "./../components/Button/Button";
 import ProgressCircle from "./../components/ProgressCircle/ProgressCircle"
 import LeftTail from "./../assets/left-tail.png";
 import RightTail from "./../assets/right-tail.png";
-
+import Desktop from "./../assets/icons/white-icon_desktop.svg";
+import Puzzle from "./../assets/icons/white-icon_puzzle.svg";
+import Star from "./../assets/icons/white-icon_star.svg";
+import Menu from "./../assets/icons/white-icon_menu.svg";
+import Cart from "./../assets/icons/white-icon_cart.svg";
+import Target from "./../assets/icons/white-icon_target.svg";
 
 function Title () {
   return (
@@ -29,28 +34,26 @@ function OurSkills() {
             </div>
           </div> 
 
-          <ProgressCircle num="75" name="web design" />
-          <ProgressCircle num="92" name="web development" />
-          <ProgressCircle num="68" name="speed optimization" />
-          <ProgressCircle num="100" name="customer support" />
-          <ProgressCircle num="83" name="marketing" />
-          <ProgressCircle num="50" name="advertisment" />
+          <ProgressCircle num={75} name="web design" />
+          <ProgressCircle num={92} name="web development" />
+          <ProgressCircle num={68} name="speed optimization" />
+          <ProgressCircle num={100} name="customer support" />
+          <ProgressCircle num={83} name="marketing" />
+          <ProgressCircle num={50} name="advertisment" />
 
         </div>
       </section>
 
 
 
-      <section className="section bg-white">
+      <section className="section bg-white py-8 pt-14">
         <div className="section__container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-justify">
-          <div className=" bg-white">
-            <Tag />
-          </div>
-          <div className="h-test-100  bg-white">2</div>
-          <div className="h-test-100  bg-teal">3</div>
-          <div className="h-test-100  bg-white">4</div>
-          <div className="h-test-100  bg-teal">5</div>
-          <div className="h-test-100  bg-white">6</div>
+            <Tag  h1="responsive & multipurpose" h2="Desktops, Tablets & Phones" icon={Desktop} />
+            <Tag  h1="easy customization" h2="Desktops, Tablets & Phones" icon={Puzzle} translate="translate(-3px,10px)"  />
+            <Tag  h1="unlimited features" h2="Shortcodes, Typography & Different Layouts" icon={Star} />
+            <Tag  h1="clean & modular coding" h2="100% Clean, Valid & Well-Commented Coding" icon={Menu} translate="translate(-2px,10px)" />
+            <Tag  h1="the best e-commerce solutions" h2="WooCommerce Fully Integration" icon={Cart} />
+            <Tag  h1="awesome friendly support" h2="Free Lifetime Support & Updates" icon={Target} />
         </div>
       </section>
 
