@@ -2,12 +2,20 @@
 
 button {
   outline: 0px solid transparent;
+  border: 0px solid transparent;
   font-family: Raleway;
-  &:hover,:active{
+  &:hover {
     outline: 0px solid transparent;
     background-color: $teal !important;
     color: #e3e3e3 !important;
+    border: 0px solid transparent;
   }
+  
+  &:hover > * >  .btn-span
+  {
+    color: #e3e3e3 !important;
+  }
+  
    &:focus{
     outline: 0px solid transparent;
     // background-color: $teal !important;

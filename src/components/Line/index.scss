@@ -1,0 +1,24 @@
+@import "./../../util.scss";
+
+
+$lines-heightx:2px;
+.line1 {
+
+    position: relative;
+    top:2px;
+    height: $lines-heightx;
+    width: 100%;
+    background: linear-gradient(to top, #f9f9f9, #e4e4e4, #f9f9f9);
+}
+
+.line2 {
+    position: relative;
+    top:-3px;
+    width: 100%;
+    height: $lines-heightx;
+    background: linear-gradient(to top, #f9f9f9, #e4e4e4, #f9f9f9);
+  }
+
+.border-teal {
+ border: 3px solid $teal;
+}

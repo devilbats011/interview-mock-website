@@ -1,0 +1,23 @@
+@import "./../../util.scss";
+
+.offer-card {
+    transition: .4s;
+    &:hover {
+        box-shadow: 1px 2px 6px black;
+
+        & > .offer-card__icon {
+            background-color: $teal;
+        }
+    }
+    &__icon {
+        transition: .4s;
+    }
+
+    &__img {
+        margin: 0px auto;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+

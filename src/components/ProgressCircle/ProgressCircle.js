@@ -4,7 +4,7 @@ import "./index.scss";
 
 function ProgressCircle({ num = 50 ,name="No-Name"}) {
   return (
-    <section className="progressx p-4 flex flex-col width-fit gap-4 bg-black">
+    <section className="progressx p-4 flex flex-col gap-4 bg-black b-checkx">
       <div className=" b-check-x relative">
         <CircularProgress
           variant="determinate"
@@ -13,9 +13,9 @@ function ProgressCircle({ num = 50 ,name="No-Name"}) {
           thickness={1.5}
           className="rotate-180"
         />
-        <h1 className="progress-number font-raleway great-h1 thinner-light-grey">{num}%</h1>
+        <h1 className="progress-number raleway-extra-bold great-h1 thinner-light-grey relative">{num}%</h1>
       </div>
-      <h3 className="normal-grey txt1 text-center weight-x-bold tracking-wide" > {name} </h3>
+      <h3 className="normal-grey txt1 text-center raleway-extra-bold tracking-wide uppercase" > {name} </h3>
     </section>
   );
 }

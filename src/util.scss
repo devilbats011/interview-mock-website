@@ -53,7 +53,7 @@
   font-family: 'Raleway';
 }
 .raleway-medium {
-  font-family: 'RalewayMedium';
+  font-family: 'RalewayMedium' !important;
 }
 
 .raleway-extra-bold {
@@ -92,49 +92,42 @@
 /* font-size */
 .greater-h1 {
   font-size: 60px;
-  font-stretch: normal;
-  font-style: italic;
-  letter-spacing: normal;
 }
+
 
 .great-h1 {
   font-size: 30px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 0.53;
+
+}
+.size-33 {
+  font-size: 33px;
 }
 .size-30 {
     font-size:30px;
 }
 
+.size-26 {
+  font-size: 26px;
+}
+
 .h1 {
   font-size: 26px;
-  line-height: 0.77;
-  letter-spacing: normal;
+
 }
 
 .great-h2 {
   font-size: 20px;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.7;
-  letter-spacing: normal;
+
 }
 
 .h2 {
   font-size: 16px;
-  font-stretch: normal;
-  font-style: normal;
-  // line-height: 1;
-  letter-spacing: normal;
+
 }
 
 .txt1 {
   font-size: 14px;
-  font-stretch: normal;
-  font-style: normal;
-  // line-height: normal;
-  letter-spacing: normal;
+
 }
 
 .txt2 {
@@ -245,6 +238,11 @@ $blackTooth: #404040;
   color: #8a8a8a;
 }
 
+.color-8a8a8a {
+  color: #8a8a8a;
+   
+}
+
 .great-grey {
   color: #7a7a7a;
 }
@@ -257,6 +255,23 @@ $blackTooth: #404040;
 .b-bottom-none {
   border-bottom: transparent;
 
+}
+
+
+@media(max-width:760px)
+{
+  .hide--maxmd {
+    display: none;
+  }
+}
+@media(min-width: 768px)
+{
+  .size-35--md {
+    font-size: 35px;
+  }
+  .size-45--md {
+    font-size: 45px;
+  }
 }
 
 @media(min-width: 1024px)
