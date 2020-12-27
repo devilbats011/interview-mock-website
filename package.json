@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "^9.8.6",
+    "axios": "^0.21.1",
     "node-sass": "4.14.1",
     "postcss": "^7.0.35",
     "react": "^17.0.1",
@@ -22,7 +23,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "mock-db": "json-server --watch db.json --port 3005"
   },
   "eslintConfig": {
     "extends": [

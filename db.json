@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "a person",
+      "occupation": "Diamond Miner",
+      "email": "aa@bb.cc",
+      "contact": "0123456789",
+      "message": "Loves Burger Ramli!"
+    },
+    {
+      "name": "Fred",
+      "occupation": "burger maker",
+      "email": "Fred@love.burger",
+      "contact": "0124567890",
+      "message": "let's burger up, people!",
+      "id": 2
+    },
+    {
+      "name": "Fred-2",
+      "occupation": "burger maker",
+      "email": "Fred@love.burger",
+      "contact": "0124567890",
+      "message": "let's burger up, people!",
+      "id": 3
+    },
+    {
+      "name": "aguy",
+      "occupation": "Receptionist",
+      "email": "aguy@mail.com",
+      "contact": "1234567890",
+      "message": "message me",
+      "id": 4
+    }
+  ]
+}
