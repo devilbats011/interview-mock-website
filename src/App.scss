@@ -3,11 +3,10 @@
 contain class of
   -> section 
   -> img-homepage 
-  -> aside
   -> offer
   -> register
 ------------------
-Based on mobile-first design
+
 @media(min-1024px) /lg  contain class of
   -> sectiom
   -> offer
@@ -38,28 +37,6 @@ Based on mobile-first design
   background-image: url(./assets/homepage.jpg);
   object-fit: contain;
   background-size: cover;
-}
-
-.aside {
-  min-height: 100vh;
-  overflow: scroll;
-  &__item {
-    cursor: pointer;
-    padding: 0.5rem;
-    color: #e3e3e3;
-    text-align: center;
-
-    &:first-of-type {
-      cursor: none;
-      text-align: right;
-      padding-right: 1rem;
-      /*
-      &:active {
-        outline: 1px solid #e3e3e3;
-      }
-      */
-    }
-  }
 }
 
 .offer {
@@ -104,9 +81,6 @@ Based on mobile-first design
       }
       */
     }
-  }
-  .aside {
-    display: none;
   }
 
   .offer {

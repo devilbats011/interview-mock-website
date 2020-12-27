@@ -15,6 +15,8 @@ import homer from "./../assets/people/homer.jpg";
 import jack from "./../assets/people/jack.jpg";
 import thor from "./../assets/people/thor.jpg";
 import scarlet from "./../assets/people/scarlet.jpg";
+import Diamond from "./../components/IconDiamond/IconDiamond";
+import briefcase from "./../assets/icons/briefcase.svg";
 
 function Title () {
   return (
@@ -27,7 +29,14 @@ function Title () {
 function OurSkills() {
   return (
     <>
-      <section className="section bg-black">
+      <section className="section bg-black pt-6">
+      <div className="absolute b-check-x"
+         style={{ height:"54px",width:"54px",left:"50%",transform:"translate(-50%,-90%)"}}
+        >
+         <Diamond icon={briefcase} style={{margin:"8px" }} teal />
+        </div>
+
+
         <div className="section__container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 text-center">
 
           <div className="col-span-2 md:col-span-3 lg:col-span-6 h-test-100">
@@ -38,12 +47,12 @@ function OurSkills() {
             </div>
           </div> 
 
-          <ProgressCircle num={75} name="web design" />
-          <ProgressCircle num={92} name="web development" />
-          <ProgressCircle num={68} name="speed optimization" />
+          <ProgressCircle num={75}  name="web design" />
+          <ProgressCircle num={92}  name="web development" />
+          <ProgressCircle num={68}  name="speed optimization" />
           <ProgressCircle num={100} name="customer support" />
-          <ProgressCircle num={83} name="marketing" />
-          <ProgressCircle num={50} name="advertisment" />
+          <ProgressCircle num={83}  name="marketing" />
+          <ProgressCircle num={50}  name="advertisment" />
 
         </div>
       </section>

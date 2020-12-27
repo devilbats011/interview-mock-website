@@ -1,12 +1,11 @@
 import React from 'react'
-import LeftTail from "./../assets/left-tail.png";
-import RightTail from "./../assets/right-tail.png";
-import OfferCard from "./../components/OfferCard/OfferCard";
-import Desktop from "./../assets/icons/white-icon_desktop.svg";
-import Puzzle from "./../assets/icons/white-icon_puzzle.svg";
-import Target from "./../assets/icons/white-icon_target.svg";
+import LeftTail from  "./../../assets/left-tail.png";
+import RightTail from "./../../assets/right-tail.png";
+import OfferCard from "./../../components/OfferCard/OfferCard";
+import Desktop from   "./../../assets/icons/white-icon_desktop.svg";
+import Puzzle from    "./../../assets/icons/white-icon_puzzle.svg";
+import Target from    "./../../assets/icons/white-icon_target.svg";
 import "./weoffer.scss";
-
 
 function Hr () {
   return (
@@ -27,7 +26,7 @@ function Title () {
 
 function WeOffer() {
     return (
-        <section className="section relative bg-white flex flex-col py-20">
+        <section className="weoffer_section section relative bg-white flex flex-col py-20">
         <div className="susah section__container flex justify-center">
             <Hr/>
             <img src={RightTail} alt="left" className="hide--maxmd" style={{width:'28px',height:'15px',transform:"translateY(14px)"}} />

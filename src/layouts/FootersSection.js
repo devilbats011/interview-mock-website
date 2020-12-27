@@ -2,15 +2,23 @@ import React from "react";
 import Slide from "./../components/Slide/Slide";
 import Button from "./../components/SquareButton/SquareButton";
 import close from "./../assets/white-icon_close.svg";
+import Diamond from "./../components/IconDiamond/IconDiamond";
 
 function FootersSection() {
   return (
     <>
-      <section className="section bg-teal pb-3">
+      <section className="section bg-teal pb-3 pt-6">
+        <div className="absolute b-check-x"
+         style={{ height:"54px",width:"54px",left:"50%",transform:"translate(-50%,-90%)"}}
+        >
+         <Diamond icon={close} style={{margin:"8px" }} black />
+        </div>
+
+
         <div className="section__container flex flex-col justify-center items-center">
-          <div className="m-5 rounded bg-thinner-light-grey txt2 uppercase">
+          <div className="m-5 rounded bg-thinner-light-grey txt2 ">
             <p className="p-3 px-4 text-center">
-              <span className="teal raleway-extra-bold  ">
+              <span className="teal raleway-extra-bold  uppercase">
                 alexis simpson
               </span>
               <span className="aaa raleway-medium"> - CEO & Developer</span>

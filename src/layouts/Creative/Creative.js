@@ -1,6 +1,7 @@
 import React from "react";
-import Line from "../components/Line";
-import DownIcon from "./../assets/icons/teal-carrot-down.svg";
+import Line from "./../../components/Line";
+import DownIcon from "./../../assets/icons/teal-carrot-down.svg";
+import './creative.scss'
 function Creative() {
   return (
     <section className="section">
@@ -21,12 +22,12 @@ function Creative() {
             </h2>
             <div className="relative h2 uppercase raleway-extra-bold black my-6 flex justify-center items-center gap-1 b-checkx">
               <Line className="w-0 md:w-1/3" right />
-              <h3 className="w-3/3 md:w-1/3">
+              <h3 className="w-3/3 width-fit">
                 <span className="teal"> Start </span> Doing It
               </h3>
               <Line className="w-0 md:w-1/3" left />
             </div>
-            <div className="mx-auto rounded-full w-10 h-10 border-teal cursor-pointer"> 
+            <div className="creative-btn mx-auto rounded-full border-teal cursor-pointer">
               <img src={DownIcon} alt="down"/>
             </div>
           </div>

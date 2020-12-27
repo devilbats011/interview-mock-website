@@ -26,7 +26,7 @@ function ContactCard({
           </h2>
 
           <div className="mt-3 text-center b-check-x txt2 aaa contact-text-container">
-            <p className=" width-fit b-checkx mx-auto email-text">
+            <p className=" width-fit b-checkx mx-auto email-text mb-1">
               <img src={mailIcon}  className="contactx-icon mr-1" alt="mail" /> {email}
             </p>
             <p className="b-checkx mx-auto">
