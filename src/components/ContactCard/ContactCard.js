@@ -2,6 +2,9 @@ import React from "react";
 import Person1 from "./../../assets/people/person-1.png";
 import "./index.scss";
 import GroupIcons from "./../GroupIconDiamond/GroupIconDiamond";
+import mailIcon from "./../../assets/icons/icon_mail.svg";
+import phoneIcon from "./../../assets/icons/icon_phone.svg";
+
 function ContactCard({
   name = "ALEXIS SIMPSON",
   title = "CEO-DEVELOPER",
@@ -22,12 +25,13 @@ function ContactCard({
           {title}
         </h2>
 
-      <div className="mt-3 text-center b-check-x txt-2 aaa ">
-          <p className="h2 width-fit b-checkx mx-auto">
-            <span> M </span> {email}
+      <div className="mt-3 text-center b-check-x txt2 aaa ">
+          <p className=" width-fit b-checkx mx-auto ">
+            <img src={mailIcon}  className="contactx-icon mr-1" alt="mail" /> {email}
           </p>
-          <p className="h2 b-checkx mx-auto">
-            <span> E </span> {phone}
+          <p className="b-checkx mx-auto">
+            <img src={phoneIcon} className="contactx-icon mr-1" alt="phone" /> 
+             {phone}
           </p>
       </div>
       </div>
