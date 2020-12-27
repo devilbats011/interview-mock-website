@@ -11,6 +11,10 @@ import Star from "./../assets/icons/white-icon_star.svg";
 import Menu from "./../assets/icons/white-icon_menu.svg";
 import Cart from "./../assets/icons/white-icon_cart.svg";
 import Target from "./../assets/icons/white-icon_target.svg";
+import homer from "./../assets/people/homer.jpg";
+import jack from "./../assets/people/jack.jpg";
+import thor from "./../assets/people/thor.jpg";
+import scarlet from "./../assets/people/scarlet.jpg";
 
 function Title () {
   return (
@@ -60,10 +64,10 @@ function OurSkills() {
 
       <section className="section  bg-black py-10 pt-20">
         <div className="section__container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 text-center b-check-x gap-5">
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
-          <ContactCard />
+          <ContactCard  person={homer}   />
+          <ContactCard  person={jack}  name="STEVEN COLE" title="User Interface Designer" email="s.cole@unique.com" />
+          <ContactCard  person={thor}  name="FRANK PIENER" title="Sales Manager" email="f.piener@unique.com" />
+          <ContactCard  person={scarlet}  name="ASHLEY LENNON" title="IT Specialist" email="a.lennon@unique.com" />
         </div>
         <div className="section__container relative py-5">
           {/* <Btn className="rounded bg-teal w-full  font-extrabold txt2 leading-5 tracking-wider thinner-light-grey"> */}

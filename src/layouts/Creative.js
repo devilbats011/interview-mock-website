@@ -10,7 +10,7 @@ function Creative() {
       >
         <section className="grid-span-2 lg:grid-span-1 b-check-x lg:flex lg:justify-end py-32 ">
           <div className="text-center width-fit mx-auto lg:mx-0 uppercase relative xl:left-20">
-            <h3 className="txt2 relative b-checkx raleway-extra-bold" style={{ top: "9px" }}>
+            <h3 className="txt1 relative b-checkx raleway-medium" style={{ top: "9px" }}>
               What are you waiting for?
             </h3>
             <h1 className="raleway-extra-bold size-26 size-45--md size-60--xl">

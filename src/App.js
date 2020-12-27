@@ -9,7 +9,7 @@ import Creative from "./layouts/Creative";
 import Navigation from "./layouts/Navigation";
 import WeOffer from "./layouts/WeOffer";
 import OurSkills from "./layouts/OurSkills";
-import Register from "./layouts/Register";
+import Register from "./layouts/Register/Register";
 import Foots from "./layouts/FootersSection";
 
 function App() {

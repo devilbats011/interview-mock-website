@@ -1,0 +1,42 @@
+@import "./../../util.scss";
+
+$arrowHeight: 6px;
+
+.arrow-wrapper {
+  cursor: pointer;
+  margin:0px;
+  padding: 0px;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+}
+
+.arrow-contain {
+  margin:.4rem;
+  padding: 0px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.arrow {
+    margin:0px;
+    padding: 0px;
+  border-top: 0.6rem solid #fff;
+  border-left: $arrowHeight solid transparent;
+  border-right: $arrowHeight solid transparent;
+  height: 0;
+  width: 0;
+  position: relative;
+  top: 0px;
+  
+  &--left {
+    transform: rotate(90deg) translateY(2px);
+  }
+  &--right {
+    transform: rotate(-90deg) translateY(2px);
+  }
+}
+

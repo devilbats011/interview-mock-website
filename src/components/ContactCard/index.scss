@@ -41,6 +41,10 @@
 
 
    }
+
+   &:hover > .contact-card__under_box > .contact-text-container > .email-text {
+      color: $teal;
+   }
    
 
 
@@ -86,4 +90,8 @@
   height: 15px;
     display: inline-block;
     transform: translateY(-2px);
+}
+
+.email-text {
+  transition: .4s;
 }

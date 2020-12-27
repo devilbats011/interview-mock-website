@@ -5,7 +5,7 @@ import React from "react";
 
 function Button({ children, variant = "contained",...p }) {
   const stylesContained = { color:"#e3e3e3",backgroundColor: "#00a99d" };
-  const stylesOutlined  = { color:"inherit",backgroundColor: "transparent",border:"1px solid transparent" };
+  const stylesOutlined  = { color:"inherit",backgroundColor: "transparent",border:"1px solid #dedede" };
 
   function handleStyles() {
     let styles = {};
