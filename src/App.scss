@@ -4,11 +4,11 @@ contain class of
   -> section 
   -> img-homepage 
   -> offer
-  -> register
+
 ------------------
 
 @media(min-1024px) /lg  contain class of
-  -> sectiom
+  -> section
   -> offer
 **/
 
@@ -45,21 +45,6 @@ contain class of
   }
 }
 
-.register {
-  border: 3px solid #dedede;
-  &__item {
-    font-size: 12px;
-    font-family: MyriadPro;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 6px;
-    border: 2px solid #dedede;
-    outline: transparent;
-    &:active,:focus {
-      outline: transparent;
-    }
-  }
-}
 
 /* lg  and above */
 @media (min-width: 1024px) {
@@ -70,17 +55,6 @@ contain class of
       margin: 0 15% 0 15%;
     }
 
-  }
-
-  .nav {
-    &__item {
-      display: block;
-      /*
-      &:nth-of-type(1){
-        float: left;
-      }
-      */
-    }
   }
 
   .offer {

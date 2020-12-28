@@ -17,8 +17,6 @@ const [isOpen,setIsOpen] = useState(false)
     isItOpen ? asidex.current.classList.add("open") : asidex.current.classList.remove("open")
   }
 
-
-
   useEffect(() => {
     setScrolled(true)
   }, [])

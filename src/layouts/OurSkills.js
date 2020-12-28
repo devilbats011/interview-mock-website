@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React,{useEffect,useRef,useState} from "react";
 import ContactCard from "./../components/ContactCard/ContactCard";
 import Tag from "./../components/Tagtooth/TagTooth";
 import Btn from "./../components/Button/Button";
@@ -27,9 +28,28 @@ function Title () {
 }
 
 function OurSkills() {
+  /* when user scroll to the progress Circle Layouts,
+     the progress Circles
+     will start racing animation */
+  const progressCirclesGroup = useRef(null)
+  const [startRace,setStartRace] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [])
+
+  function handleScroll() {
+    if (window.pageYOffset + 350 >= progressCirclesGroup.current.offsetTop && !startRace) {
+      setStartRace(true)
+    }
+}
+
   return (
     <>
-      <section className="section bg-black pt-6">
+      <section className="section bg-black py-6" ref={progressCirclesGroup} >
       <div className="absolute b-check-x"
          style={{ height:"54px",width:"54px",left:"50%",transform:"translate(-50%,-90%)"}}
         >
@@ -37,9 +57,9 @@ function OurSkills() {
         </div>
 
 
-        <div className="section__container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 text-center">
+        <div className="section__container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 text-center" >
 
-          <div className="col-span-2 md:col-span-3 lg:col-span-6 h-test-100">
+          <div className="col-span-2 md:col-span-3 lg:col-span-6 h-test-100" >
             <div className="py-5 section__container flex justify-center gap-1">
               <img src={RightTail} alt="left" className="hide--maxmd" style={{width:'28px',height:'15px',transform:"translateY(14px)"}} />
               <Title/>
@@ -47,12 +67,12 @@ function OurSkills() {
             </div>
           </div> 
 
-          <ProgressCircle num={75}  name="web design" />
-          <ProgressCircle num={92}  name="web development" />
-          <ProgressCircle num={68}  name="speed optimization" />
-          <ProgressCircle num={100} name="customer support" />
-          <ProgressCircle num={83}  name="marketing" />
-          <ProgressCircle num={50}  name="advertisment" />
+          <ProgressCircle num={75}  name="web design" startRace={startRace} />
+          <ProgressCircle num={92}  name="web development" startRace={startRace} />
+          <ProgressCircle num={68}  name="speed optimization" startRace={startRace} />
+          <ProgressCircle num={100} name="customer support" startRace={startRace} />
+          <ProgressCircle num={83}  name="marketing" startRace={startRace} />
+          <ProgressCircle num={50}  name="advertisment" startRace={startRace} />
 
         </div>
       </section>

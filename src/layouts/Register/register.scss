@@ -1,4 +1,31 @@
 
+
+.register {
+    border: 3px solid #dedede;
+    &__item {
+      font-size: 12px;
+      font-family: MyriadPro;
+      margin: 1rem;
+      padding: .6rem;
+      border-radius: 6px;
+      border: 2px solid #dedede;
+      outline: transparent;
+      &:active,:focus {
+          outline: transparent;
+        }
+    }
+    
+    &__validate {
+        transition: 0.4s;
+        margin: 0 1rem;
+        padding:0rem 0.5rem;
+        font-size: 12px;
+        color: #bf0000;
+        opacity: 1;
+    }
+    
+}
+
 .register__select::after {
 
     color: #8a8a8a;
