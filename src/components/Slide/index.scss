@@ -1,13 +1,23 @@
 @import "./../../util.scss";
 
 .slider {
-  position: relative;
   overflow: hidden;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-  display: flex;
-  justify-content: flex-end;
+  @mixin base {
+      position: relative;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      justify-content: flex-end;
+
+  }
+  @include base;
+  
+  .slider__wrapper {
+      @include base;
+      transition: 0.3s;
+      transform: translateX(0px);
+  }
 
   &__img {
     $eachWidth: 80%;

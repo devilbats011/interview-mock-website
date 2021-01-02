@@ -64,12 +64,25 @@ function Slide() {
     <div className=" flex flex-row justify-center items-center text-center relative gap-2">
       <Button direction="left" variant="white" />
       <div className="slider" >
+        <section className="slider__wrapper">
         <img src={Logo1} alt={"logo"} className="slider__img slider__img-md" />
         <img src={Logo1} alt={"logo"} className="slider__img slider__img-md" />
         <img src={Logo1} alt={"logo"} className="slider__img slider__img-md" />
         <img src={Logo2} alt={"logo"} className="slider__img slider__img-md" />
         <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
         <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        <img src={Logo3} alt={"logo"} className="slider__img slider__img-md" />
+        </section>
 
       </div>
       <Button direction="right" variant="teal" />
