@@ -48,7 +48,7 @@ function SquareButton({variant = "black", direction}) {
   const [pack] = useState(VariantHandler())
 
   return (
-    <div className="arrow-wrapper bg-light-black" style={{ backgroundColor: pack.bg }} >
+    <div className="arrow-wrapper bg-light-black " style={{ backgroundColor: pack.bg }} >
       <div className="arrow-contain">
       <div className={arrow}  style={{ borderTop:`0.6rem solid ${pack.arrowColor}` }} ></div>
       </div>

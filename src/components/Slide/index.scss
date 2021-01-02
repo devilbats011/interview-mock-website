@@ -1,8 +1,49 @@
-// @import "./../util.scss";
 @import "./../../util.scss";
 
-.slide-img {    
-    width: 200px;
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: flex-end;
+
+  &__img {
+    $eachWidth: 80%;
+    $eachMargin: $eachWidth / 6;
     height: 140px;
-    filter: brightness(0.5);
+    width: $eachWidth;
+    margin: 0 $eachMargin;
+
+  }
+}
+
+@media (min-width: 440px) {
+  .slider {
+    &__img-md {
+      $eachWidth: 100% * 0.4;
+      $eachMargin: $eachWidth / 4;
+      width: $eachWidth;
+      margin: 0 $eachMargin;
+
+      &:first-of-type {
+        margin-left: 0%;
+      }
+      &:last-of-type {
+        margin-right: 0%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .slider {
+    &__img-md {
+      $eachWidth: 100% * 0.2;
+      $eachMargin: $eachWidth / 6;
+      width: $eachWidth;
+      margin: 0 $eachMargin;
+    }
+  }
 }
