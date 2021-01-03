@@ -3,7 +3,7 @@ import "./index.scss";
 import React,{useState} from "react";
 /* bg --> black|white|teal */
 
-function SquareButton({variant = "black", direction}) {
+function SquareButton({variant = "black", direction, ...p}) {
   
   function VariantHandler() {
     let pack = {};
@@ -48,7 +48,7 @@ function SquareButton({variant = "black", direction}) {
   const [pack] = useState(VariantHandler())
 
   return (
-    <div className="arrow-wrapper bg-light-black " style={{ backgroundColor: pack.bg }} >
+    <div className="arrow-wrapper bg-light-black " style={{ backgroundColor: pack.bg }} {...p} >
       <div className="arrow-contain">
       <div className={arrow}  style={{ borderTop:`0.6rem solid ${pack.arrowColor}` }} ></div>
       </div>
