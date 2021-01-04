@@ -20,7 +20,7 @@ function clickHandler (direction) {
       slideLeftNumber = parseFloat(slideLeftNumber);
       const SliderLeftpx = sliderWrapper.current.style.left
       let sum = 0;
-      
+
       switch(direction){
         case "left":
           console.log("left enter")
@@ -31,10 +31,12 @@ function clickHandler (direction) {
           }
           let totalMargin1 = totalSumMargin(selectedChildLeft)
           sum = sumPx(SliderLeftpx,(slideLeftNumber*1) + totalMargin1)
-          if( countSliderImg >= sliderChildrenLength ) {
+          const subtractNumber = leftSubstractMediaQueries();
+          console.log('subtractNumber:', subtractNumber)
+          if( countSliderImg >= sliderChildrenLength - subtractNumber ) {
             styleLeft0pxForSliderWrapper() 
             break
-            }
+          }
           sliderWrapper.current.style.left = sum;
           break;
         case "right":
@@ -56,6 +58,21 @@ function clickHandler (direction) {
             break;
       }
 }
+function leftSubstractMediaQueries()
+{
+  let tempNumber = 0;
+  
+  if(window.matchMedia("(min-width: 440px)").matches){
+    tempNumber = 0;
+  }
+
+  if( window.matchMedia("(min-width: 768px)").matches ){
+    tempNumber = 2;
+  }
+
+  return tempNumber;
+}
+
 function totalSumMargin(theChild){
   const sliderImgMargin = window.getComputedStyle(theChild)
   const getMarginLeft = parseFloat(sliderImgMargin.getPropertyValue('margin-left'))
@@ -65,8 +82,12 @@ function totalSumMargin(theChild){
 }
 
 function styleLeft0pxForSliderWrapper() {
-  countSliderImg = 0;
-  sliderWrapper.current.style.left = "0px";
+  if(sliderWrapper.current != null)
+  {
+    countSliderImg = 0;
+    sliderWrapper.current.style.left = "0px";
+
+  }
 }
 
 function sumPx(px,number){
@@ -92,7 +113,7 @@ useEffect(() => {
   window.addEventListener("resize", ()=>styleLeft0pxForSliderWrapper())
   
   return () => {
-    window.removeEventListener("resize", styleLeft0pxForSliderWrapper())
+    window.removeEventListener("resize",()=>styleLeft0pxForSliderWrapper())
   }
 })
 
@@ -114,7 +135,7 @@ useEffect(() => {
         </section>
 
       </div>
-      <Button direction="right" variant="teal" onClick={(e) =>{ clickHandler("right") }}  />
+      <Button direction="right" variant="teal" onClick={() =>{ clickHandler("right") }}  />
     </div>
   );
 }
